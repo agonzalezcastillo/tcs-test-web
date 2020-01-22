@@ -3,6 +3,7 @@ package com.tcstest.web.api;
 import com.tcstest.web.exception.GeneralException;
 import com.tcstest.web.model.Product;
 import com.tcstest.web.service.ProductService;
+import io.swagger.annotations.Api;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 @RequestMapping("/product")
+@Api(value = "Products", description = "the Products API")
 public class ProductsController {
 
     private ProductService productService;
